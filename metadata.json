@@ -1,0 +1,6 @@
+{
+  "name": "DiyaVerse – A Diwali Greeting You Light, Not Just Read",
+  "description": "Design a kaleidoscope mandala rangoli, craft multilingual cultural blessings with AI Poetics, and share an interactive Diwali ritual where recipients strike a spark to light a clay diya and launch constellation name fireworks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

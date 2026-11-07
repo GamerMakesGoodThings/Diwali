@@ -1,0 +1,138 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Pillar 0: Global default-deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Global primitives
+    function isValidId(id) {
+      return id is string && id.size() >= 6 && id.size() <= 32 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // Pillar 2: Validation Blueprint for Greeting entity
+    function isValidGreeting(data) {
+      return data.keys().hasAll([
+        'id',
+        'theme',
+        'recipientName',
+        'recipientLang',
+        'recipientTone',
+        'messageText',
+        'messageTranslation',
+        'messageSource',
+        'rangoliSymmetry',
+        'rangoliPalette',
+        'rangoliStrokesJson',
+        'opensCount',
+        'litCount',
+        'status',
+        'createdAt',
+        'updatedAt'
+      ]) &&
+      data.keys().hasOnly([
+        'id',
+        'theme',
+        'recipientName',
+        'recipientLang',
+        'recipientTone',
+        'messageText',
+        'messageTranslation',
+        'messageSource',
+        'rangoliSymmetry',
+        'rangoliPalette',
+        'rangoliStrokesJson',
+        'opensCount',
+        'litCount',
+        'status',
+        'createdAt',
+        'updatedAt'
+      ]) &&
+      data.id is string && data.id.size() >= 6 && data.id.size() <= 32 && data.id.matches('^[a-zA-Z0-9_\\-]+$') &&
+      data.theme is string && data.theme.size() <= 32 && data.theme in ['royal-marigold', 'midnight-indigo', 'sacred-terracotta', 'peacock-emerald', 'lotus-rose', 'jaipur-amethyst', 'sandalwood-ivory'] &&
+      data.recipientName is string && data.recipientName.size() >= 1 && data.recipientName.size() <= 40 &&
+      data.recipientLang is string && data.recipientLang.size() <= 8 && data.recipientLang in ['en', 'hi', 'bn', 'mr'] &&
+      data.recipientTone is string && data.recipientTone.size() <= 24 && data.recipientTone in ['family', 'friend', 'colleague', 'literary'] &&
+      data.messageText is string && data.messageText.size() >= 1 && data.messageText.size() <= 600 &&
+      data.messageTranslation is string && data.messageTranslation.size() <= 600 &&
+      data.messageSource is string && data.messageSource.size() <= 16 && data.messageSource in ['gemini', 'template', 'custom'] &&
+      data.rangoliSymmetry is int && data.rangoliSymmetry in [6, 8, 12] &&
+      data.rangoliPalette is string && data.rangoliPalette.size() >= 4 && data.rangoliPalette.size() <= 120 &&
+      data.rangoliStrokesJson is string && data.rangoliStrokesJson.size() >= 2 && data.rangoliStrokesJson.size() <= 16384 &&
+      data.opensCount is int && data.opensCount >= 0 && data.opensCount <= 1000000 &&
+      data.litCount is int && data.litCount >= 0 && data.litCount <= 1000000 &&
+      data.status is string && data.status.size() <= 16 && data.status in ['active', 'archived'] &&
+      data.createdAt is timestamp &&
+      data.updatedAt is timestamp;
+    }
+
+    function isImmutableGreetingFieldsPreserved() {
+      return incoming().id == existing().id &&
+        incoming().theme == existing().theme &&
+        incoming().recipientName == existing().recipientName &&
+        incoming().recipientLang == existing().recipientLang &&
+        incoming().recipientTone == existing().recipientTone &&
+        incoming().messageText == existing().messageText &&
+        incoming().messageTranslation == existing().messageTranslation &&
+        incoming().messageSource == existing().messageSource &&
+        incoming().rangoliSymmetry == existing().rangoliSymmetry &&
+        incoming().rangoliPalette == existing().rangoliPalette &&
+        incoming().rangoliStrokesJson == existing().rangoliStrokesJson &&
+        incoming().createdAt == existing().createdAt;
+    }
+
+    function isIncrementLitAction() {
+      return incoming().diff(existing()).affectedKeys().hasOnly(['litCount', 'updatedAt']) &&
+        incoming().litCount == existing().litCount + 1 &&
+        incoming().updatedAt == request.time;
+    }
+
+    function isIncrementOpensAction() {
+      return incoming().diff(existing()).affectedKeys().hasOnly(['opensCount', 'updatedAt']) &&
+        incoming().opensCount == existing().opensCount + 1 &&
+        incoming().updatedAt == request.time;
+    }
+
+    // Connection validation document
+    match /test/connection {
+      allow get: if true;
+      allow list, write: if false;
+    }
+
+    // Greetings collection
+    match /greetings/{greetingId} {
+      // Single-document read by unguessable short ID only; list enumeration is strictly denied
+      allow get: if isValidId(greetingId);
+      allow list: if false;
+
+      // Create requires valid ID, strict schema validation, initial 0 counters, active status, and server timestamps
+      allow create: if isValidId(greetingId) &&
+        isValidGreeting(incoming()) &&
+        incoming().id == greetingId &&
+        incoming().opensCount == 0 &&
+        incoming().litCount == 0 &&
+        incoming().status == 'active' &&
+        incoming().createdAt == request.time &&
+        incoming().updatedAt == request.time;
+
+      // Action-based update: only allow +1 monotonic increments on active greetings while preserving all immutable fields
+      allow update: if isValidId(greetingId) &&
+        isValidGreeting(incoming()) &&
+        existing().status == 'active' &&
+        isImmutableGreetingFieldsPreserved() &&
+        (isIncrementLitAction() || isIncrementOpensAction());
+
+      allow delete: if false;
+    }
+  }
+}

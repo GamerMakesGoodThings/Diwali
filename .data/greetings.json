@@ -1,0 +1,585 @@
+{
+  "greetings": {
+    "k7Qx9mA2": {
+      "id": "k7Qx9mA2",
+      "theme": "midnight-indigo",
+      "recipient": {
+        "name": "Anika",
+        "lang": "bn",
+        "tone": "family"
+      },
+      "message": {
+        "text": "প্রিয় Anika, মাটির প্রদীপের এই স্নিগ্ধ শিখা যেমন অমাবস্যার অন্ধকার দূর করে, তেমনি আপনার ঘর ও মন ভরে উঠুক শান্তি, আনন্দ ও মঙ্গলের আলোয়। শুভ দীপাবলি!",
+        "translation": "Dear Anika, as the gentle flame of this clay diya dispels the darkness of the new moon, may your home and heart be filled with the light of peace, joy, and wellbeing. Happy Diwali!",
+        "source": "gemini"
+      },
+      "rangoli": {
+        "symmetry": 8,
+        "palette": [
+          "#F4A300",
+          "#C2185B",
+          "#3949AB",
+          "#10B981",
+          "#FBBF24"
+        ],
+        "strokes": [
+          {
+            "color": 0,
+            "width": 3.5,
+            "points": [
+              [
+                0.5,
+                0.43
+              ],
+              [
+                0.54,
+                0.38
+              ],
+              [
+                0.57,
+                0.31
+              ],
+              [
+                0.53,
+                0.24
+              ],
+              [
+                0.5,
+                0.19
+              ]
+            ]
+          },
+          {
+            "color": 1,
+            "width": 3,
+            "points": [
+              [
+                0.52,
+                0.31
+              ],
+              [
+                0.58,
+                0.28
+              ],
+              [
+                0.63,
+                0.22
+              ],
+              [
+                0.57,
+                0.15
+              ],
+              [
+                0.5,
+                0.11
+              ]
+            ]
+          },
+          {
+            "color": 2,
+            "width": 2.5,
+            "points": [
+              [
+                0.5,
+                0.46
+              ],
+              [
+                0.52,
+                0.44
+              ],
+              [
+                0.5,
+                0.41
+              ]
+            ]
+          },
+          {
+            "color": 3,
+            "width": 2,
+            "points": [
+              [
+                0.55,
+                0.22
+              ],
+              [
+                0.61,
+                0.19
+              ],
+              [
+                0.66,
+                0.14
+              ]
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "opens": 17,
+        "lit": 9
+      },
+      "createdAt": "2026-11-01T10:00:00Z",
+      "expiresAt": "2027-02-01T10:00:00Z"
+    },
+    "m9Vr4pL8": {
+      "id": "m9Vr4pL8",
+      "theme": "royal-marigold",
+      "recipient": {
+        "name": "Aarav",
+        "lang": "hi",
+        "tone": "literary"
+      },
+      "message": {
+        "text": "तमस के मौन आँगन में Aarav ने जो एक दीप धरा, तो माटी ने भी नक्षत्रों का गौरव पा लिया। ज्योति के इस महापर्व पर आपका अंतर्मन सदा उजास से भरा रहे।",
+        "translation": "When Aarav placed a single lamp in the silent courtyard of darkness, humble clay attained the grace of stars. On this grand festival of light, may your spirit remain forever radiant.",
+        "source": "gemini"
+      },
+      "rangoli": {
+        "symmetry": 12,
+        "palette": [
+          "#F4A300",
+          "#D81B60",
+          "#FF7043",
+          "#2E7D32",
+          "#FFD54F"
+        ],
+        "strokes": [
+          {
+            "color": 0,
+            "width": 3.5,
+            "points": [
+              [
+                0.5,
+                0.44
+              ],
+              [
+                0.53,
+                0.39
+              ],
+              [
+                0.56,
+                0.33
+              ],
+              [
+                0.52,
+                0.28
+              ],
+              [
+                0.5,
+                0.24
+              ]
+            ]
+          },
+          {
+            "color": 1,
+            "width": 2.5,
+            "points": [
+              [
+                0.5,
+                0.24
+              ],
+              [
+                0.55,
+                0.2
+              ],
+              [
+                0.61,
+                0.17
+              ],
+              [
+                0.58,
+                0.12
+              ],
+              [
+                0.5,
+                0.09
+              ]
+            ]
+          },
+          {
+            "color": 2,
+            "width": 3,
+            "points": [
+              [
+                0.52,
+                0.36
+              ],
+              [
+                0.59,
+                0.34
+              ],
+              [
+                0.65,
+                0.29
+              ],
+              [
+                0.69,
+                0.23
+              ]
+            ]
+          },
+          {
+            "color": 3,
+            "width": 2,
+            "points": [
+              [
+                0.5,
+                0.16
+              ],
+              [
+                0.53,
+                0.14
+              ],
+              [
+                0.5,
+                0.12
+              ]
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "opens": 22,
+        "lit": 17
+      },
+      "createdAt": "2026-11-01T10:00:00Z",
+      "expiresAt": "2027-02-01T10:00:00Z"
+    },
+    "t3Kp8xN5": {
+      "id": "t3Kp8xN5",
+      "theme": "sacred-terracotta",
+      "recipient": {
+        "name": "Sai",
+        "lang": "mr",
+        "tone": "friend"
+      },
+      "message": {
+        "text": "प्रिय Sai, दिवाळीच्या या लक्ष दिव्यांनी तुझ्या आयुष्यात नवे रंग, आनंद आणि सोनेरी यश घेऊन येवो. आपल्या मैत्रीचा हा प्रकाश असाच तेवत राहो — शुभ दिवाळी!",
+        "translation": "Dear Sai, may the countless lamps of Diwali bring vibrant joy and golden success into your life. May the light of our friendship shine on forever — Happy Diwali!",
+        "source": "gemini"
+      },
+      "rangoli": {
+        "symmetry": 6,
+        "palette": [
+          "#E66C37",
+          "#F4A300",
+          "#8E24AA",
+          "#15803D",
+          "#FDE047"
+        ],
+        "strokes": [
+          {
+            "color": 0,
+            "width": 3,
+            "points": [
+              [
+                0.5,
+                0.45
+              ],
+              [
+                0.54,
+                0.38
+              ],
+              [
+                0.5,
+                0.3
+              ]
+            ]
+          },
+          {
+            "color": 1,
+            "width": 3.5,
+            "points": [
+              [
+                0.5,
+                0.3
+              ],
+              [
+                0.58,
+                0.26
+              ],
+              [
+                0.64,
+                0.18
+              ],
+              [
+                0.54,
+                0.14
+              ],
+              [
+                0.5,
+                0.08
+              ]
+            ]
+          },
+          {
+            "color": 3,
+            "width": 2.5,
+            "points": [
+              [
+                0.54,
+                0.38
+              ],
+              [
+                0.62,
+                0.36
+              ],
+              [
+                0.68,
+                0.31
+              ],
+              [
+                0.63,
+                0.26
+              ]
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "opens": 8,
+        "lit": 6
+      },
+      "createdAt": "2026-11-01T10:00:00Z",
+      "expiresAt": "2027-02-01T10:00:00Z"
+    },
+    "M4YG9RBw": {
+      "id": "M4YG9RBw",
+      "theme": "midnight-indigo",
+      "recipient": {
+        "name": "Meera",
+        "lang": "hi",
+        "tone": "family"
+      },
+      "message": {
+        "text": "प्रिय Meera, जैसे एक नन्हा मिट्टी का दीप अमावस के अंधकार को हर लेता है, वैसे ही आपका आँगन सुख, स्वास्थ्य और अपनों के स्नेह से सदा आलोकित रहे। शुभ दीपावली!",
+        "translation": "Dear Meera, just as a small clay lamp dispels the new-moon darkness, may your courtyard remain forever illuminated with joy, health, and the warmth of loved ones. Happy Diwali!",
+        "source": "template"
+      },
+      "rangoli": {
+        "symmetry": 12,
+        "palette": [
+          "#F4A300",
+          "#C2185B",
+          "#3949AB",
+          "#10B981",
+          "#FBBF24"
+        ],
+        "strokes": [
+          {
+            "color": 0,
+            "width": 3.5,
+            "points": [
+              [
+                0.5,
+                0.44
+              ],
+              [
+                0.56,
+                0.33
+              ],
+              [
+                0.5,
+                0.24
+              ]
+            ]
+          },
+          {
+            "color": 1,
+            "width": 2.5,
+            "points": [
+              [
+                0.5,
+                0.24
+              ],
+              [
+                0.55,
+                0.2
+              ],
+              [
+                0.61,
+                0.17
+              ],
+              [
+                0.58,
+                0.12
+              ],
+              [
+                0.5,
+                0.09
+              ]
+            ]
+          },
+          {
+            "color": 2,
+            "width": 3,
+            "points": [
+              [
+                0.52,
+                0.36
+              ],
+              [
+                0.59,
+                0.34
+              ],
+              [
+                0.65,
+                0.29
+              ],
+              [
+                0.69,
+                0.23
+              ]
+            ]
+          },
+          {
+            "color": 3,
+            "width": 2,
+            "points": [
+              [
+                0.5,
+                0.16
+              ],
+              [
+                0.53,
+                0.14
+              ],
+              [
+                0.5,
+                0.12
+              ]
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "opens": 1,
+        "lit": 1
+      },
+      "createdAt": "2026-11-01T17:35:51.060Z",
+      "expiresAt": "2027-01-30T17:35:51.060Z"
+    },
+    "QdTGhs4D": {
+      "id": "QdTGhs4D",
+      "theme": "midnight-indigo",
+      "recipient": {
+        "name": "Meera",
+        "lang": "hi",
+        "tone": "family"
+      },
+      "message": {
+        "text": "प्रिय Meera, जैसे एक नन्हा मिट्टी का दीप अमावस के अंधकार को हर लेता है, वैसे ही आपका आँगन सुख, स्वास्थ्य और अपनों के स्नेह से सदा आलोकित रहे। शुभ दीपावली!",
+        "translation": "Dear Meera, just as a small clay lamp dispels the new-moon darkness, may your courtyard remain forever illuminated with joy, health, and the warmth of loved ones. Happy Diwali!",
+        "source": "template"
+      },
+      "rangoli": {
+        "symmetry": 12,
+        "palette": [
+          "#F4A300",
+          "#C2185B",
+          "#3949AB",
+          "#10B981",
+          "#FBBF24"
+        ],
+        "strokes": [
+          {
+            "color": 0,
+            "width": 3.5,
+            "points": [
+              [
+                0.5,
+                0.44
+              ],
+              [
+                0.56,
+                0.33
+              ],
+              [
+                0.5,
+                0.24
+              ]
+            ]
+          },
+          {
+            "color": 1,
+            "width": 2.5,
+            "points": [
+              [
+                0.5,
+                0.24
+              ],
+              [
+                0.55,
+                0.2
+              ],
+              [
+                0.61,
+                0.17
+              ],
+              [
+                0.58,
+                0.12
+              ],
+              [
+                0.5,
+                0.09
+              ]
+            ]
+          },
+          {
+            "color": 2,
+            "width": 3,
+            "points": [
+              [
+                0.52,
+                0.36
+              ],
+              [
+                0.59,
+                0.34
+              ],
+              [
+                0.65,
+                0.29
+              ],
+              [
+                0.69,
+                0.23
+              ]
+            ]
+          },
+          {
+            "color": 3,
+            "width": 2,
+            "points": [
+              [
+                0.5,
+                0.16
+              ],
+              [
+                0.53,
+                0.14
+              ],
+              [
+                0.5,
+                0.12
+              ]
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "opens": 1,
+        "lit": 1
+      },
+      "createdAt": "2026-11-01T17:39:10.763Z",
+      "expiresAt": "2027-01-30T17:39:10.763Z"
+    }
+  },
+  "manageTokens": {
+    "k7Qx9mA2": "demo_token_anika",
+    "m9Vr4pL8": "demo_token_aarav",
+    "t3Kp8xN5": "demo_token_sai",
+    "M4YG9RBw": "89a9494704b5224e40bf2894",
+    "QdTGhs4D": "a477df9eeb74d9b1ffc50ca4"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "entities": {
+    "Greeting": {
+      "title": "Greeting",
+      "description": "An interactive Diwali greeting document containing recipient metadata, blessing message, compressed mandala rangoli vector JSON, and reaction counters.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "8-character alphanumeric short ID for the greeting.",
+          "minLength": 6,
+          "maxLength": 32,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "theme": {
+          "type": "string",
+          "description": "Visual festival palette theme identifier.",
+          "enum": [
+            "royal-marigold",
+            "midnight-indigo",
+            "sacred-terracotta",
+            "peacock-emerald",
+            "lotus-rose",
+            "jaipur-amethyst",
+            "sandalwood-ivory"
+          ],
+          "maxLength": 32
+        },
+        "recipientName": {
+          "type": "string",
+          "description": "First name of the recipient (sanitized and length-limited).",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "recipientLang": {
+          "type": "string",
+          "description": "ISO code of the blessing language.",
+          "enum": ["en", "hi", "bn", "mr"],
+          "maxLength": 8
+        },
+        "recipientTone": {
+          "type": "string",
+          "description": "Relationship register or poetic tone of the blessing.",
+          "enum": ["family", "friend", "colleague", "literary"],
+          "maxLength": 24
+        },
+        "messageText": {
+          "type": "string",
+          "description": "The personalized Diwali blessing message.",
+          "minLength": 1,
+          "maxLength": 600
+        },
+        "messageTranslation": {
+          "type": "string",
+          "description": "Optional English companion translation when written in Hindi, Bengali, or Marathi.",
+          "maxLength": 600
+        },
+        "messageSource": {
+          "type": "string",
+          "description": "Origin of the blessing text.",
+          "enum": ["gemini", "template", "custom"],
+          "maxLength": 16
+        },
+        "rangoliSymmetry": {
+          "type": "integer",
+          "description": "Number of radial symmetry axes (6, 8, or 12)."
+        },
+        "rangoliPalette": {
+          "type": "string",
+          "description": "Comma-separated hex color palette used in the mandala.",
+          "maxLength": 120
+        },
+        "rangoliStrokesJson": {
+          "type": "string",
+          "description": "Ramer-Douglas-Peucker simplified base strokes serialized as compact normalized JSON.",
+          "minLength": 2,
+          "maxLength": 16384
+        },
+        "opensCount": {
+          "type": "integer",
+          "description": "Number of times the greeting ritual link was opened."
+        },
+        "litCount": {
+          "type": "integer",
+          "description": "Number of times recipients ignited the diya and sent a Diya Lit reaction."
+        },
+        "status": {
+          "type": "string",
+          "description": "Lifecycle status of the greeting.",
+          "enum": ["active", "archived"],
+          "maxLength": 16
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the greeting was published."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the greeting counters were last updated."
+        }
+      },
+      "required": [
+        "id",
+        "theme",
+        "recipientName",
+        "recipientLang",
+        "recipientTone",
+        "messageText",
+        "messageTranslation",
+        "messageSource",
+        "rangoliSymmetry",
+        "rangoliPalette",
+        "rangoliStrokesJson",
+        "opensCount",
+        "litCount",
+        "status",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/greetings/{greetingId}": {
+      "schema": {
+        "$ref": "#/entities/Greeting"
+      },
+      "description": "Stores published DiyaVerse greetings indexed by their unguessable 8-character short ID."
+    }
+  }
+}
